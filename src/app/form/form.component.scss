@@ -1,0 +1,28 @@
+label{
+    font-weight: bold;
+}
+
+.input{
+    justify-content: space-around;
+}
+
+.button{
+    margin: 2rem;    
+    display: flex;
+    justify-content: center;
+}
+
+.button:active {
+    background-color: #FFFFFF;
+    color: #0275d8
+  }
+
+.form-group{
+     display: inline-block;
+     margin: 0.5rem;
+}
+
+.card-div{
+    display: flex;
+    justify-content: space-around;
+}

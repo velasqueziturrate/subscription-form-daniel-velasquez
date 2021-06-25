@@ -1,0 +1,55 @@
+<form (submit)="onSubmit()" #form="ngForm">
+    <div class="input row">
+      <div class="form-group col col-11 col-sm-11 col-md-5 col-lg-3">
+        <label htmlFor="name">Name</label>
+        <input
+        type="text" 
+        class="form-control"
+        id="name" 
+        placeholder="Daniel Velasquez" 
+        required
+        pattern="[a-zA-Z]+"
+        #name
+        />
+      </div>
+        <div class="form-group col col-11 col-sm-11 col-md-5 col-lg-3">
+          <label htmlFor="email">Email</label>
+          <input
+          type="email" 
+          class="form-control"
+          id="email" 
+          aria-describedby="emailHelp"
+          placeholder="velasqueziturrate@gmail.com" 
+          required
+          #email
+          />
+      </div>
+          <div class="form-group col col-11 col-sm-11 col-md-5 col-lg-3">
+            <label htmlFor="phone">Phone</label>
+            <input 
+            type="number" 
+            class="form-control" 
+            id="phone" 
+            placeholder="623456789"
+            required
+            pattern="[0-9]+"
+            minlength="9"
+            maxlength="9"
+            #phone
+            />
+      </div>
+          </div>
+          <div class="button">
+            <button
+            id="subscription" 
+            type="submit" 
+            class="btn btn-primary d-block"
+            (click)="guardar(name.value, email.value, phone.value)"
+            >
+            Add subscription
+            </button>
+          </div>
+    </form>
+    <div class="card-div row row-flex">
+      <app-card *ngFor="let u of users" [user]="u"></app-card>
+    </div>
